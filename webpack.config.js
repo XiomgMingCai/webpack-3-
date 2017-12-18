@@ -5,7 +5,14 @@ var path = require('path');
 var  UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 var   HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-
+var settings = {
+    publicPath: 'http://cdn.com/assets',
+    version: '1.0.0'
+}
+settings = {
+    publicPath: '/',
+    version: '1.0.0'
+}
 module.exports = {
     entry:{
         one:'./src/one.js',
@@ -14,7 +21,7 @@ module.exports = {
     output:{
         path:path.resolve(__dirname,'dist'),
         filename:'[name].js',
-        publicPath: '/',
+        publicPath: settings.publicPath,
     },
     module:{
         rules: [//规则
@@ -31,7 +38,9 @@ module.exports = {
                     {
                         loader: 'url-loader',
                         options: {
-                            limit: 600
+                            limit: 600,
+                            outputPath:'assets/images/',
+                            name:'[hash].[ext]'
                         }
                     }
                 ]

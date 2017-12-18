@@ -3,3 +3,9 @@ html,body{
     height: 100%;
     background-color: #999;
 }
+#logo{
+    background:url(./baidu_jgylogo3.gif) no-repeat center ;
+    height: 300px;
+    width: 300px;
+    border: 1px solid red;
+}

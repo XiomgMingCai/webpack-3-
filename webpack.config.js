@@ -26,6 +26,7 @@ module.exports = {
         new UglifyJsPlugin()
         ,new HtmlWebpackPlugin({
             my_str: 'my-var',
+            projectPath:"http://项目七牛云cdn地址/assets",
             title: 'Custom template',
             template: './src/my-index.ejs',
             hash: true

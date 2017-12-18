@@ -9,13 +9,14 @@ module.exports = {
     },
     output:{
         path:path.resolve(__dirname,'dist'),
-        filename:'[name].js'
+        filename:'[name].js',
+        publicPath: '/',
     },
     module:{},
     plugins:[],
     devServer:{
         contentBase:path.resolve(__dirname,'./'),
-        host:'localhost',
+        host:'192.168.1.110',
         compress:true,
         port:9000
     }

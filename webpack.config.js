@@ -2,7 +2,7 @@
  * Created by xiongmingcai on 17/12/18.
  */
 var path = require('path');
-var UglifyJsPlugin = require('path');
+var  UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 module.exports = {
     entry:{
         one:'./src/one.js',
@@ -22,11 +22,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false
-            }
-        })
+       new UglifyJsPlugin()
     ],
     devServer:{
         contentBase:path.resolve(__dirname,'./'),

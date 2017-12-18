@@ -23,10 +23,12 @@ module.exports = {
         ]
     },
     plugins: [
-       new UglifyJsPlugin()
+        new UglifyJsPlugin()
         ,new HtmlWebpackPlugin({
-            hash: true,
-            title: '我的自定义title',
+            my_str: 'my-var',
+            title: 'Custom template',
+            template: './src/my-index.ejs',
+            hash: true
         })
     ],
     devServer:{

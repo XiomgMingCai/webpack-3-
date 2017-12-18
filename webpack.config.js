@@ -13,5 +13,10 @@ module.exports = {
     },
     module:{},
     plugins:[],
-    devServer:{}
+    devServer:{
+        contentBase:path.resolve(__dirname,'./'),
+        host:'localhost',
+        compress:true,
+        port:9000
+    }
 };

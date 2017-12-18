@@ -58,3 +58,4 @@ fabric.properties
 out
 gen
 /dist/
+/node_modules/

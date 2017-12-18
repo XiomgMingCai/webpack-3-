@@ -4,6 +4,8 @@
 var path = require('path');
 var  UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 var   HtmlWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
 module.exports = {
     entry:{
         one:'./src/one.js',
@@ -18,7 +20,10 @@ module.exports = {
         rules: [//规则
             {
                 test: /\.css$/,
-                use: [ 'style-loader', 'css-loader' ]
+                use: ExtractTextPlugin.extract({
+                    fallback: "style-loader",
+                    use: "css-loader"
+                })
             },
             {
                 test: /\.(png|jpg|gif)$/,
@@ -26,7 +31,7 @@ module.exports = {
                     {
                         loader: 'url-loader',
                         options: {
-                            limit: 8192
+                            limit: 600
                         }
                     }
                 ]
@@ -42,6 +47,7 @@ module.exports = {
             template: './src/my-index.ejs',
             hash: true
         })
+        ,new ExtractTextPlugin("assets/css/main.css")
     ],
     devServer:{
         contentBase:path.resolve(__dirname,'./'),

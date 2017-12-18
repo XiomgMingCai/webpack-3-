@@ -3,6 +3,7 @@
  */
 var path = require('path');
 var  UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+var   HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
     entry:{
         one:'./src/one.js',
@@ -23,6 +24,10 @@ module.exports = {
     },
     plugins: [
        new UglifyJsPlugin()
+        ,new HtmlWebpackPlugin({
+            hash: true,
+            title: '我的自定义title',
+        })
     ],
     devServer:{
         contentBase:path.resolve(__dirname,'./'),

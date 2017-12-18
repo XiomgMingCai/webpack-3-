@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/XiomgMingCai/webpack-3-#readme",
   "devDependencies": {
+    "css-loader": "^0.28.7",
+    "style-loader": "^0.19.1",
     "webpack": "^3.10.0"
   },
   "dependencies": {

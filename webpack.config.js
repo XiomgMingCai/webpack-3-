@@ -45,8 +45,8 @@ module.exports = {
                         }
                     }
                 ]
-            },
-            {
+            }
+            , {
                 test: /\.(ejs|html)$/i,
                 use: ['html-withimg-loader']
             }
@@ -61,7 +61,7 @@ module.exports = {
             template: './src/my-index.ejs',
             hash: true
         })
-        ,new ExtractTextPlugin("assets/css/main.css")
+        ,new ExtractTextPlugin("assets/css/[hash].css")
     ],
     devServer:{
         contentBase:path.resolve(__dirname,'./'),

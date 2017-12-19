@@ -9,6 +9,8 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
     entry: {
         main: './src/one.js',
+        jquery:'jquery',
+        vue:'vue'
     },
     module: {
         rules: [
@@ -46,9 +48,20 @@ module.exports = {
             }
         ]
     },
+    resolve: {
+        alias: {
+            vue: 'vue/dist/vue.js'
+        }
+    },
     plugins: [
         new webpack.ProvidePlugin({
-            $:'jquery'
+            $:'jquery',
+            Vue:"Vue"
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name:['jquery','vue'],
+            filename:"assets/js/[name].js",
+            minChunks:2
         }),
         new HtmlWebpackPlugin({
             my_str: 'my-var',

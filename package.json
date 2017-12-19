@@ -35,6 +35,7 @@
     "yargs-parser": "^8.0.0"
   },
   "dependencies": {
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "vue": "^2.5.11"
   }
 }

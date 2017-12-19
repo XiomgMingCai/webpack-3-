@@ -16,7 +16,7 @@ settings = {
 module.exports = {
     entry:{
         one:'./src/one.js',
-        tow:'./src/tow.js'
+        tow:'./src/add.js'
     },
     output:{
         path:path.resolve(__dirname,'dist'),

@@ -1,6 +1,7 @@
 import css from './main.css';
+import add from './add.js';
 var imgurl = require('./201611141559227978.jpg');
-document.getElementById('title').innerText = 'hello webpack ';
+document.getElementById('title').innerText = 'hello webpack ! 1';
 var img = document.createElement('img');
 img.src = imgurl ;
 

@@ -45,6 +45,10 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                test: /\.(ejs|html)$/i,
+                use: ['html-withimg-loader']
             }
         ]
     },

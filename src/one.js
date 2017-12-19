@@ -1,2 +1,8 @@
 import css from './main.css';
-document.getElementById('title').innerText = 'hello webpack '
+var imgurl = require('./201611141559227978.jpg');
+document.getElementById('title').innerText = 'hello webpack ';
+var img = document.createElement('img');
+img.src = imgurl ;
+
+var body = document.getElementsByTagName('body')[0];
+body.appendChild(img);

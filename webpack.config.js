@@ -40,8 +40,8 @@ module.exports = {
                         options: {
                             limit: 600,
                             outputPath:'assets/images/',
-                            name:'[hash].[ext]',
-                            publicPath:'http://cdn.mongyu.cn/assets'
+                            name:'[hash].[ext]'
+                            // ,publicPath:'http://cdn.mongyu.cn/assets'
                         }
                     }
                 ]

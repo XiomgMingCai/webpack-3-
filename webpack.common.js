@@ -2,6 +2,7 @@
  * Created by xiongmingcai on 17/12/19.
  */
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
@@ -46,6 +47,9 @@ module.exports = {
         ]
     },
     plugins: [
+        new webpack.ProvidePlugin({
+            $:'jquery'
+        }),
         new HtmlWebpackPlugin({
             my_str: 'my-var',
             projectPath: "http://项目七牛云cdn地址/assets",

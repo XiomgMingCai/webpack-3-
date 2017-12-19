@@ -7,6 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
+    target: 'web',//node
     entry: {
         main: './src/one.js',
         jquery:'jquery',
